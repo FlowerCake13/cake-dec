@@ -365,4 +365,15 @@ for (i=0; i<tab.length; i++) {
 
 ## COMBO
 
-To unlock your lock, do the following: 
+To unlock your lock, do the following:
+
+1. Console.log the number of all the HTML Elements on your page. You can retrieve this number by using the following:
+
+``` JavaScript
+document.getElementsByTagName("*").length;
+```
+2. Add this value to the value from the last instruction from the funky-functions repository.
+
+3. Multiply the value from #2 by 2.
+
+4. Subtract 11 from the value from #3 and that's your combo! 
