@@ -62,6 +62,8 @@ To complete Part II, fulfill the following requirements:
 
 ![HTML Example](https://github.com/junior-devleague/cake-dec/blob/master/assets/htmlexample.png)
 
+**The following "sidebar" div is a SIBLING to the above div with an id of options.** 
+
   * ```div``` with an ```id``` of "sidebar".
     * ```div``` with an ```id``` of "topbar".
       * ```input``` with an ```id``` of "search" and ```placeholder``` attribute of 'Search...'.
@@ -112,4 +114,4 @@ To complete Part II, fulfill the following requirements:
   * ```div``` with an ```id``` of "cashbox".
     * ```button``` with an ```id``` of "sell" and text "Sell".
     * ```h2``` with an ```id``` of "current-cash" and text "$0".
-    * ```button``` with an ```id``` of "reset" and text "Reset". 
+    * ```button``` with an ```id``` of "reset" and text "Reset".
