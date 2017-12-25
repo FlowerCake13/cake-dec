@@ -296,4 +296,73 @@ window.onload = function(){
   * ```variable``` called tab to store the elements with ```class``` of "tablink".
   * ```variable``` called tabcontent to store the elements with ```class``` of "tabcontent".
   * ```variable``` called layerSelect to store the element with ```id``` of "layerselect".
-  * ```variable``` with ```id
+  * ```variable``` called typeSelect to store the element with ```id``` of "layerselect-type".
+  * ```variable``` called widthSelect to store the element with ```id``` of "layerselect-width".
+  * ```variable``` called heightSelect to store the element with ```id``` of "layerselect-height".
+  * ```variable``` called cakeArea to store the element with ```id``` of "cake".
+  * ```variable``` called pastCakeArea to store the element with ```id``` of "cakecontent".
+  * ```variable``` called addLayerButton to store the element with ```id``` of "add-layer".
+  * ```variable``` called restartButton to store the element with ```id``` of "restart".
+  * ```variable``` called sellButton to store the element with ```id``` of "sell".
+  * ```variable``` called resetButton to store the element with ```id``` of "reset".
+  * ```variable``` called addDecorButton to store the element with ```id``` of "add-decor".
+  * ```variable``` called profit to store the element with ```id``` of "current-cash".
+  * ```variable``` called currentCash that equals 0.
+
+6. Add an Event Listener on the addLayerButton that listens for a click. In the function, do the following:
+  * Create a variable called newLayer that will create a new ```div``` element.
+  * Set the ```width``` of the newLayer to the value of ```widthSelect``` as follows:
+  ``` JavaScript
+  newLayer.style.width = widthSelect.value
+  ```
+  This takes the value of the width that the user chose in the dropdown and set it to the newLayer.
+  * Set the ```height``` of the newLayer to the value of ```heightSelect```.
+  * Add the ```className``` typeSelect.value to newLayer. In our CSS, we made classes for the different types (strawberry, chocolate...etc.) to change the background color.
+  * Add the ```className``` " cakelayer" to newLayer. **We need the space before the "c" in "cake" so that we don't override the previous class we just set, but add on to it so we have as an example: class = "strawberry cakelayer"**
+  * Append newLayer to the cakeArea.
+
+7. Add an Event Listener on the restartButton to listen for a click. In the function, do the following:
+  * Make the cake layers go away by setting the innerHTML of cakeArea to "" (nothing).
+
+8. Add an Event Listener on the sellButton to listen for a click. In the function, do the following:
+  * Create an if statement that checks if the innerHTML of cakeArea is NOT equal to nothing. If so, do the following:
+    * Set the innerHTML of newCake equal to the innerHTML of cakeArea. This populates our cake tab with the cake we just made.
+    * Give newCake a new ```className``` "prevCake">
+    * Append newCake to pastCakeArea.
+    * Set the innerHTML of cakeArea to "" (nothing).
+    * Set currentCash equal to the value of currentCash + 100.
+    * Change the innerHTML of profit to the value of currentCash.
+  * If the if statement is false and there is no cake layer present, create an alert that says ("No cake to sell!").
+
+9. Add an Event Listener on the resetButton to listen for aclick. In the function, do the following:
+  * Set currentCash equal to 0.
+  * Set the innerHTML of profit equal to the value of currentCash.
+
+10. Create a for loop that will loop through the length of the tab nodelist. When we created the variable tab to store elements with the class name tablink, we got a nodelist to work with since it returned multiple elements from that class. We can loop through the length of the nodelist just like an array as follows:
+
+``` javascript
+for (i=0; i<tab.length; i++) {
+  // more code
+}
+```
+  * In this for loop, do the following:
+  * For each element in the tab nodelist, (Hint: Use the variable i to help lessen repetition!) add an Event Listener that will listen for a click. Make the function take in an ```event``` as a parameter.
+    * In this for loop, call the function called deactivate which we will make soon.
+    * Set the className of the currentTarget of the ```event``` object to " tablink active". Hint: Use object notation! currentTarget is a property of ```event``` and ```className``` is a property of ```event.currentTarget```!
+    * Call the function switchTab with parameter event.currentTarget. We will also make this function soon.
+
+11. Create a function called deactivate which will take no parameters. In this function, do the following:
+  * Create a for loop that will loop through the length of the tab nodelist and increment the variable i by 1 every time.
+    * In this for loop, set each tab nodelist element's ```className``` to " tablink inactive". (Hint: Use i to help lessen repetition!).
+    * Set the display of each element in the tabcontent nodelist to "none". (Hint: Use i to help lessen repetition!).
+
+12. Create a function called switchTab that will take in the word target as a placeholder for a parameter.
+  * Create a switch statement where it will switch upon the ```target.id```.
+    * If the ```target.id``` is "searchtab", set the display property of the 1st element in the tabcontent nodelist to "flex".
+    * If the ```target.id``` is "layertab", set the display property of the 2nd element in the tabcontent nodelist to "flex".
+    * If the ```target.id``` is "decortab", set the display property of the 3rd element in the tabcontent nodelist to "flex".
+    * If the ```target.id``` is "caketab", set the display property of the 4th element in the tabcontent nodelist to "flex".
+
+## COMBO
+
+To unlock your lock, do the following: 
