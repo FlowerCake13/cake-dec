@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cake Dec</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<div id="container">
+		<div id="options">
+			<div id="searchtab" class="active tablink">
+				<img src="assets/blue.png">
+				<h2>SEARCH</h2>
+			</div>
+			<div id="layertab" class="tablink">
+				<img src="assets/blue.png">
+				<h2>LAYER</h2>
+			</div>
+			<div id="decortab" class="tablink">
+				<img src="assets/blue.png">
+				<h2>DECOR</h2>
+			</div>
+			<div id="caketab" class="tablink">
+				<img src="assets/blue.png">
+				<h2>CAKES</h2>
+			</div>
+		</div>
+		<div id="sidebar">
+			<div id="topbar">
+				<input id="search" placeholder="Search...">
+			</div>
+			<div id="options-content">
+				<div class="tabcontent" id="searchcontent">
+					<h1>Search</h1>
+				</div>
+				<div class="tabcontent" id="layercontent">
+					<h1>Layer</h1>
+					<div id="layerselect-container">
+						<div class="row" id="row1">
+							<div id="layerselect-type-container">
+								<h2>Type</h2>
+								<select id="layerselect-type">
+									<option value="strawberry">Strawberry</option>
+									<option value="vanilla">Vanilla</option>
+									<option value="chocolate">Chocolate</option>
+									<option value="cookies-and-cream">Cookies and Cream</option>
+									<option value="candle">Candle</option>
+								</select>
+							</div>
+						</div>
+						<div class="row" id="row2">
+							<div id="layerselect-width-container">
+								<h2>Width</h2>
+								<select id="layerselect-width">
+									<option value="100px">Less Wide</option>
+									<option value="200px">Wide</option>
+									<option value="300px">Most Wide</option>
+								</select>
+							</div>
+							<div id="layerselect-height-container">
+								<h2>Height</h2>
+								<select id="layerselect-height">
+									<option value="20px">Cream</option>
+									<option value="30px">Short</option>
+									<option value="40px">Medium</option>
+									<option value="50px">Tall</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<button id="add-layer">Add</button>
+					<button id="restart">Restart</button>
+				</div>
+				<div id="decorcontent" class="tabcontent">
+					<h1>Decor</h1>
+					<div id="decorselect-container">
+						<div id="decor1" class="dot" draggable="true" ondragstart="drag(event)"></div>
+						<div id="decor2" class="dot" draggable="true" ondragstart="drag(event)"></div>
+						<div id="decor3" class="dot" draggable="true" ondragstart="drag(event)"></div>
+						<img id="candle" src="assets/candle.png" draggable="true" ondragstart="drag(event)">
+					</div>
+					<button id="add-decor">Add Decor</button>
+				</div>
+				<div id="cakecontent" class="tabcontent"> 
+					<h1>Cakes</h1>
+				</div>
+			</div>
+		</div>
+		<div id="cake-container">
+			<div id="cakebase"></div>
+			<div id="cake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		</div>
+		<div id="cashbox">
+			<button id="sell">Sell</button>
+			<h2 id="current-cash">$0</h2>
+			<button id="reset">Reset</button>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/app.js"></script>
+</html>
